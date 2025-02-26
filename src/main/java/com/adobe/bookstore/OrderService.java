@@ -35,7 +35,7 @@ public String processOrder(List<OrderItem> items) {
         if (bookStockOpt.get().getQuantity() < item.getQuantity()) {
             throw new IllegalArgumentException("Not enough stock for book: " + item.getBookId());
         }
-        if (item.getQuantity() <= 0) { // ✅ Ajout de la vérification ici
+        if (item.getQuantity() <= 0) {
             throw new IllegalArgumentException("Invalid quantity for book: " + item.getBookId());
         }
     }
